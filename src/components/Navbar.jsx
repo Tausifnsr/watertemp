@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Logo from '../assets/logo.png'
 import { MdClose } from "react-icons/md";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { GoSearch } from "react-icons/go";
@@ -30,7 +31,7 @@ function Navbar() {
       setShowPhoneInfo(false);
       setGap("gap-x-0")
       setShowIcons(false);
-      setIconsBackground("hover:bg-[#eeb034]")
+      setIconsBackground("hover:bg-[#F5A93F]")
       setIconText("hover:text-white")
       setIconWidth("lg:px-6")
       setIconHeight("py-7")
@@ -63,17 +64,18 @@ function Navbar() {
           <div className="flex flex-col gap-y-4">
             <div className="flex items-center gap-x-2 mt-0">
               {/* <img src={""} alt="logo" className="h-[50px] w-[80px]" /> */}
-              <h2 className={`logo font-bold text-[20px] ${textColor}`}>
-                Company Logo
-              </h2>
+              {/* <h2 className={`logo font-bold text-[20px] ${textColor}`}>
+                Kenko
+              </h2> */}
+              <img className="h-10" src={Logo} alt="" />
               {showPhoneInfo && ( // Conditional rendering based on scroll position
                 <div className="flex">
-                  <h2 className="text-[#eeb034] text-[28px] ml-2 mt-1 pr-5 py-4 border-r-2">
+                  <h2 className="text-[#F5A93F] text-[28px] ml-2 mt-1 pr-5 py-4 border-r-2">
                     <FiPhone />
                   </h2>
-                  <p className="text-gray-600 bg-white bg-opacity-60 mx-2">
+                  <p className="navNumber text-gray-600 bg-white bg-opacity-60 mx-2">
                     Get Free Delivery <br />
-                    <span className="text-[22px] font-bold text-black hover:text-[#eeb034] hover:cursor-default">
+                    <span className="text-[22px] font-bold text-black hover:text-[#F5A93F] hover:cursor-default transition-hover duration-500 ease-in-out">
                       812-070-3693
                     </span>
                   </p>
@@ -81,12 +83,12 @@ function Navbar() {
               )}
             </div>
           </div>
-          <ul className={`flex items-center text-[16px] font-bold ${showGap} max-lg:hidden uppercase`}>
+          <ul className={`nav flex items-center text-[16px] font-bold ${showGap} max-lg:hidden`}>
             <Link
               to="home"
               smooth={true}
               duration={500}
-              className={`leading-normal ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight}  font-sans hover:text-slate-700 cursor-pointer border-b-2 border-b-[#eeb034]`}
+              className={`leading-normal ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight} hover:text-slate-700 cursor-pointer border-b-2 border-b-[#F5A93F]`}
             >
               Home
             </Link>
@@ -94,23 +96,23 @@ function Navbar() {
               to="about"
               smooth={true}
               duration={500}
-              className={`leading-normal no-underline ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight}  font-sans hover:text-slate-700 cursor-pointer hover:border-b-2 border-b-[#eeb034] transition-border ease-out duration-100`}
+              className={`leading-normal no-underline ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight}  hover:text-slate-700 cursor-pointer hover:border-b-2 border-b-[#F5A93F] transition-border ease-out duration-100`}
             >
-              Pages
+              About Us
             </Link>
             <Link
               to="services"
               smooth={true}
               duration={500}
-              className={`leading-normal no-underline ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight}  font-sans hover:text-slate-700 cursor-pointer hover:border-b-2 border-b-[#eeb034] transition-border ease-out duration-100`}
+              className={`leading-normal no-underline ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight}  hover:text-slate-700 cursor-pointer hover:border-b-2 border-b-[#F5A93F] transition-border ease-out duration-100`}
             >
               Shop
             </Link>
-            <Link
+            {/* <Link
               to="contact"
               smooth={true}
               duration={500}
-              className={`leading-normal no-underline ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight}  font-sans cursor-pointer hover:border-b-2 border-b-[#eeb034] transition-border ease-out duration-100`}
+              className={`leading-normal no-underline ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight} cursor-pointer hover:border-b-2 border-b-[#F5A93F] transition-border ease-out duration-100`}
             >
               Element
             </Link>
@@ -118,15 +120,15 @@ function Navbar() {
               to="contact"
               smooth={true}
               duration={500}
-              className={`leading-normal no-underline ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight}  font-sans cursor-pointer hover:border-b-2 border-b-[#eeb034] transition-border ease-out duration-100`}
+              className={`leading-normal no-underline ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight} cursor-pointer hover:border-b-2 border-b-[#F5A93F] transition-border ease-out duration-100`}
             >
               Blog
-            </Link>
+            </Link> */}
             <Link
               to="contact"
               smooth={true}
               duration={500}
-              className={`leading-normal no-underline ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight}  font-sans cursor-pointer hover:border-b-2 border-b-[#eeb034] transition-border ease-out duration-100`}
+              className={`leading-normal no-underline ${textColor} ${IconText} ${IconsBackground} ${IconWidth} ${IconHeight} cursor-pointer hover:border-b-2 border-b-[#F5A93F] transition-border ease-out duration-100`}
             >
               Contact
             </Link>

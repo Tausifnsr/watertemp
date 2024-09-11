@@ -18,8 +18,11 @@ export default {
         dark: "#2e3845",
         color1: "#000046",
         color2: "#1CB5E0"
-      }
-      
+      },
+
+      rotate: {
+        'y-180': 'rotateY(180deg)',
+      },
     },
   },
   plugins: [],
